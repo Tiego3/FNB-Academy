@@ -1,0 +1,33 @@
+h1{
+    color: green;
+    font-family: sans-serif;
+}
+p{
+    color: coral;
+    font-family: fantasy;
+}
+th{
+    font-weight: 800;
+    background-color: #2695A6;
+    color: #ffffff;
+}
+tr.alt td{
+    background-color: #9AEFFC;
+}
+ul{
+    list-style-type: circle;
+}
+ol{
+    list-style-image: url(Images/pointer-icon.png);
+}
+#menu-bar a{
+    text-decoration: none;
+    background-color: aqua;
+    font-family: Helvetica, sans-serif;
+    padding: 5px;
+
+}
+#menu-bar a:hover{
+    background-color: orange;
+    color: #ffffff;
+}
