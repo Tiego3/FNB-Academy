@@ -30,7 +30,7 @@
             </tr>
             <tr>
                 <td colspan="2" onclick="digitBtnPressed(0)">0</td>
-                <td onclick="digitBtnPressed(AC)">AC</td>
+                <td onclick="btnACPressed()">AC</td>
                 <td>/</td>
             
             </tr>
@@ -38,19 +38,30 @@
                 <td colspan="4">=</td>
             </tr>
         </table>
-         <script>
-            var newline = true;
+        <script>
+            // indicate whether the next input should start on a new line
+            var newLine = true;
 
+            // Event handler for whenn a digit button is clicked
             function digitBtnPressed(button) {
-                if (newline) {
+                if (newLine) {
+                    // Start a new input line with the pressed digit
                     document.getElementById("inputBox").value = button;
-                    newline = false;
+                    newLine = false;
                 } else {
+                    // Append the digit to the current input
                     var currentValue = document.getElementById("inputBox").value;
                     document.getElementById("inputBox").value = currentValue + button;
                 }
             }
-    </script>
+
+            //   // Event handler for when the "AC" (All Clear) button is clicked
+            function btnACPressed() {
+                // Reset the input to 0 and prepare for new input
+                document.getElementById("inputBox").value = 0;
+                newLine = true;
+            }
+        </script>
         
     </body>
    
